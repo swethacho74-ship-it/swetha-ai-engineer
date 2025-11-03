@@ -164,25 +164,23 @@ nav a:hover {
     border-bottom: none;
 }
 
-/* New class for the job title and company combined */
-.job-info {
+.job-info-left {
     flex-grow: 1; 
     color: var(--primary-color);
+    padding-right: 10px; /* Space between job title and date */
 }
 
-.job-info strong {
+.job-info-left strong {
     font-size: 1.1em;
 }
 
-.dates {
+.job-info-right {
     font-style: italic;
     color: #666;
-    /* Ensures dates stay right-aligned and don't wrap too quickly */
-    min-width: 180px; 
     text-align: right;
-    flex-shrink: 0; 
+    flex-shrink: 0; /* Prevents dates from wrapping */
+    min-width: 150px; /* Ensures consistent alignment column */
 }
-
 /* --- Footer --- */
 footer {
     text-align: center;
