@@ -147,11 +147,16 @@ nav a:hover {
 }
 
 /* --- Experience Section --- */
+.job-list {
+    padding: 0;
+    margin: 0;
+}
+
 .job-list li {
     list-style: none;
     padding: 15px 0;
     border-bottom: 1px dotted #ccc;
-    display: flex;
+    display: flex; 
     justify-content: space-between;
 }
 
@@ -159,14 +164,23 @@ nav a:hover {
     border-bottom: none;
 }
 
-.job-list strong {
-    font-size: 1.1em;
+/* New class for the job title and company combined */
+.job-info {
+    flex-grow: 1; 
     color: var(--primary-color);
+}
+
+.job-info strong {
+    font-size: 1.1em;
 }
 
 .dates {
     font-style: italic;
     color: #666;
+    /* Ensures dates stay right-aligned and don't wrap too quickly */
+    min-width: 180px; 
+    text-align: right;
+    flex-shrink: 0; 
 }
 
 /* --- Footer --- */
