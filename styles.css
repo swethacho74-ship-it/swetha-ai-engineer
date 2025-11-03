@@ -156,23 +156,24 @@ nav a:hover {
     list-style: none;
     padding: 15px 0;
     border-bottom: 1px dotted #ccc;
-    display: flex; 
-    justify-content: space-between;
+    display: flex; /* Enables flexible layout for alignment */
+    justify-content: space-between; /* Pushes dates to the right */
 }
 
 .job-list li:last-child {
     border-bottom: none;
 }
 
-.job-title {
-    flex-grow: 1; /* Allows the job title to take up most of the space */
+.job-list strong {
+    font-size: 1.1em;
     color: var(--primary-color);
+    flex-grow: 1; /* Allows the job title to take up most of the space */
 }
 
 .dates {
     font-style: italic;
     color: #666;
-    /* Ensures dates stay right-aligned */
+    /* FIX FOR ALIGNMENT ISSUE: gives the date field a consistent width and right alignment */
     min-width: 180px; 
     text-align: right;
 }
