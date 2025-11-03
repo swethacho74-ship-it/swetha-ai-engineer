@@ -20,8 +20,6 @@ body {
     max-width: 1100px;
     margin: auto;
     padding: 20px;
-    /* Added padding-top to resolve the content overlapping the header issue */
-    padding-top: 40px; 
 }
 
 /* --- Header & Navigation --- */
@@ -36,6 +34,12 @@ header {
 .header-content h1 {
     margin-bottom: 5px;
     font-size: 2.5em;
+}
+
+.header-content .title {
+    margin-top: 0;
+    font-size: 1.2em;
+    font-weight: 300;
 }
 
 nav {
@@ -143,16 +147,11 @@ nav a:hover {
 }
 
 /* --- Experience Section --- */
-.job-list {
-    padding: 0;
-    margin: 0;
-}
-
 .job-list li {
     list-style: none;
     padding: 15px 0;
     border-bottom: 1px dotted #ccc;
-    display: flex; 
+    display: flex;
     justify-content: space-between;
 }
 
@@ -160,26 +159,14 @@ nav a:hover {
     border-bottom: none;
 }
 
-.job-title {
-    flex-grow: 1; 
+.job-list strong {
+    font-size: 1.1em;
     color: var(--primary-color);
 }
 
 .dates {
     font-style: italic;
     color: #666;
-    min-width: 180px; 
-    text-align: right;
-    flex-shrink: 0; /* Prevents date from shrinking on desktop */
-}
-
-/* --- Contact Section --- */
-#contact a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-#contact a:hover {
-    text-decoration: underline;
 }
 
 /* --- Footer --- */
@@ -200,7 +187,6 @@ footer a {
 @media (max-width: 768px) {
     .container {
         padding: 10px;
-        padding-top: 20px;
     }
     
     .job-list li {
@@ -210,8 +196,6 @@ footer a {
 
     .dates {
         margin-top: 5px;
-        min-width: auto;
-        text-align: left; 
     }
 
     .skills-table th, .skills-table td {
