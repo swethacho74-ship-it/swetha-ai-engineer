@@ -1,26 +1,83 @@
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swetha B. | Senior AI/ML Full Stack Engineer</title>
     <link rel="stylesheet" href="styles.css">
-    </head>
 </head>
 <body>
     <header>
         <div class="header-content">
-@@ -30,7 +30,7 @@ <h2>👋 About Me</h2>
+            <h1>Swetha.B | Senior AI/ML Full Stack Engineer</h1>
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="about" class="section-card">
+            <h2>👋 About Me</h2>
+            
+            <blockquote class="hero-summary">
                 Over 10 years of experience designing and deploying scalable, high-performance **AI and MLOps solutions**. Expertise in Python, Generative AI (LLMs, RAG, Agentic AI), and full-stack development on **AWS and Azure**.
             </blockquote>
-
-            <p>A highly experienced Senior Python Full Stack Developer with a decade-long track record in enterprise systems. Proven ability to deliver end-to-end AI initiatives, from architecting **microservices** and scalable APIs to implementing **Generative AI** solutions. Key contributions include engineering a scalable LLM inference API handling over **1,000 requests per minute**, deploying a machine learning model that **reduced fraudulent transactions by 40%**, and optimizing a microservices system to cut API response times by **30%**.</p>
+            
             <p>A highly experienced Senior Python Full Stack Developer with a decade-long track record in enterprise systems. Proven ability to deliver end-to-end AI initiatives, from architecting microservices and scalable APIs to implementing Generative AI solutions. Key contributions include engineering a scalable LLM inference API handling over 1,000 requests per minute, deploying a machine learning model that reduced fraudulent transactions by 40%, and optimizing a microservices system to cut API response times by 30%.</p>
         </section>
 
         <section id="skills" class="section-card">
-@@ -77,84 +77,6 @@ <h4>Problem:</h4>
+            <h2>🛠️ Technical Skills</h2>
+            
+            <table class="skills-table">
+                <tr>
+                    <th>Generative AI & LLM Stack</th>
+                    <td>RAG Pipelines, LLM Orchestration, Prompt Engineering, Agentic AI, Embedding Models (OpenAI, Cohere), RLHF</td>
+                </tr>
+                <tr>
+                    <th>ML/Deep Learning</th>
+                    <td>PyTorch, TensorFlow, Scikit-Learn, XGBoost, LightGBM, Hugging Face Transformers</td>
+                </tr>
+                <tr>
+                    <th>MLOps & Automation</th>
+                    <td>AWS SageMaker, MLflow, Kubeflow, Airflow, Weights & Biases (W&B), Docker, Kubernetes, Terraform, GitHub Actions, Jenkins</td>
+                </tr>
+                <tr>
+                    <th>Cloud Platforms</th>
+                    <td>AWS (Lambda, EC2, S3, RDS, API Gateway, CloudFormation), Azure (Synapse, Data Factory), GCP (BigQuery, Vertex AI)</td>
+                </tr>
+                <tr>
+                    <th>Data Engineering</th>
+                    <td>PySpark, Kafka, Pandas, NumPy, Spark SQL, Snowflake, Redshift, PostgreSQL, MongoDB, Redis</td>
+                </tr>
+                <tr>
+                    <th>Vector & AI Databases</th>
+                    <td>FAISS, Pinecone, Weaviate, Elasticsearch</td>
+                </tr>
+                <tr>
+                    <th>Languages & Frameworks</th>
+                    <td>Python, SQL, JavaScript (ES6+), Bash, FastAPI, Flask, Django</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="projects" class="section-card">
+            <h2>⭐ Featured Projects (Case Studies)</h2>
+
+            <div class="project-card">
+                <h3>1. Low-Latency LLM Inference API & RAG System</h3>
+                <h4>Problem:</h4>
                 <p>Scaling Generative AI applications requires a robust backend capable of serving LLMs and integrating external knowledge for factual accuracy (RAG).</p>
                 <h4>Solution:</h4>
                 <ul>
-                    <li>Engineered and deployed a scalable, high-throughput inference API for LLMs like GPT-3 and GPT-4 using **FastAPI and Docker**.</li>
-                    <li>Developed Retrieval-Augmented Generation (RAG) pipelines leveraging **FAISS/Pinecone/Weaviate** for contextual, grounded answers.</li>
+                    <li>Engineered and deployed a scalable, high-throughput inference API for LLMs like GPT-3 and GPT-4 using FastAPI and Docker.</li>
+                    <li>Developed Retrieval-Augmented Generation (RAG) pipelines leveraging FAISS/Pinecone/Weaviate for contextual, grounded answers.</li>
                     <li>Optimized transformer-based NLP models through quantization and pruning, improving inference performance and reducing latency by 30%.</li>
                 </ul>
                 <h4>Metrics/Outcome:</h4>
@@ -34,8 +91,8 @@
                 <p>Legacy systems lacked the speed and scalability to detect and prevent fraudulent transactions in real-time.</p>
                 <h4>Solution:</h4>
                 <ul>
-                    <li>Architected a microservices-based system using **Python and FastAPI**.</li>
-                    <li>Built a real-time, event-driven architecture using **Kafka and WebSockets** to stream live data feeds.</li>
+                    <li>Architected a microservices-based system using Python and FastAPI.</li>
+                    <li>Built a real-time, event-driven architecture using Kafka and WebSockets to stream live data feeds.</li>
                     <li>Developed and deployed a machine learning model for real-time anomaly detection.</li>
                 </ul>
                 <h4>Metrics/Outcome:</h4>
@@ -49,10 +106,10 @@
                 <p>Inconsistent and non-reproducible ML training and deployment workflows across cloud environments (AWS/Azure).</p>
                 <h4>Solution:</h4>
                 <ul>
-                    <li>Used **Terraform and AWS CloudFormation** to provision highly available cloud resources.</li>
-                    <li>Implemented **CI/CD automation** with **GitHub Actions and Jenkins** to accelerate release cycles.</li>
-                    <li>Streamlined training and deployment using **AWS SageMaker, Kubeflow, and Airflow** for scheduling, with **MLflow** for experiment tracking.</li>
-                    <li>Designed serverless, event-driven AI pipelines using **AWS Lambda, Step Functions, and Terraform**.</li>
+                    <li>Used Terraform and AWS CloudFormation to provision highly available cloud resources.</li>
+                    <li>Implemented CI/CD automation with GitHub Actions and Jenkins to accelerate release cycles.</li>
+                    <li>Streamlined training and deployment using AWS SageMaker, Kubeflow, and Airflow for scheduling, with MLflow for experiment tracking.</li>
+                    <li>Designed serverless, event-driven AI pipelines using AWS Lambda, Step Functions, and Terraform.</li>
                 </ul>
                 <h4>Metrics/Outcome:</h4>
                 <p>Led the migration of an on-premise database to AWS, designing a highly available infrastructure. Established a resilient, cost-efficient, and reproducible MLOps framework.</p>
@@ -61,56 +118,59 @@
         </section>
         
         <section id="experience" class="section-card">
-    <h2>💼 Professional Experience</h2>
-    <ul class="job-list">
-        <li>
-            <div class="job-info-left">
-                <strong>Sr. Python Full Stack Developer</strong> | Kaiser Permanente – Oakland, CA
-            </div>
-            <div class="job-info-right">
-                Oct 2023 – Present
-            </div>
-        </li>
-        <li>
-            <div class="job-info-left">
-                <strong>Sr. Python Full Stack Developer</strong> | Goldman Sachs – New York, NY
-            </div>
-            <div class="job-info-right">
-                Aug 2021 – Sep 2023
-            </div>
-        </li>
-        <li>
-            <div class="job-info-left">
-                <strong>Python Full Stack Developer</strong> | Best Buy – Richfield, MN
-            </div>
-            <div class="job-info-right">
-                Jun 2020 – Apr 2021
-            </div>
-        </li>
-        <li>
-            <div class="job-info-left">
-                <strong>Python Full Stack Developer</strong> | Ericsson – Mumbai, India
-            </div>
-            <div class="job-info-right">
-                Jan 2016 – Jul 2019
-            </div>
-        </li>
-        <li>
-            <div class="job-info-left">
-                <strong>Python Developer</strong> | Mu Sigma – Bangalore, India
-            </div>
-            <div class="job-info-right">
-                Aug 2013 – Dec 2015
-            </div>
-        </li>
-    </ul>
-</section>
+            <h2>💼 Professional Experience</h2>
+            <ul class="job-list">
+                <li>
+                    <div class="job-info-left">
+                        <strong>Sr. Python Full Stack Developer</strong> | Kaiser Permanente – Oakland, CA
+                    </div>
+                    <div class="job-info-right">
+                        Oct 2023 – Present
+                    </div>
+                </li>
+                <li>
+                    <div class="job-info-left">
+                        <strong>Sr. Python Full Stack Developer</strong> | Goldman Sachs – New York, NY
+                    </div>
+                    <div class="job-info-right">
+                        Aug 2021 – Sep 2023
+                    </div>
+                </li>
+                <li>
+                    <div class="job-info-left">
+                        <strong>Python Full Stack Developer</strong> | Best Buy – Richfield, MN
+                    </div>
+                    <div class="job-info-right">
+                        Jun 2020 – Apr 2021
+                    </div>
+                </li>
+                <li>
+                    <div class="job-info-left">
+                        <strong>Python Full Stack Developer</strong> | Ericsson – Mumbai, India
+                    </div>
+                    <div class="job-info-right">
+                        Jan 2016 – Jul 2019
+                    </div>
+                </li>
+                <li>
+                    <div class="job-info-left">
+                        <strong>Python Developer</strong> | Mu Sigma – Bangalore, India
+                    </div>
+                    <div class="job-info-right">
+                        Aug 2013 – Dec 2015
+                    </div>
+                </li>
+            </ul>
+        </section>
 
         <section id="contact" class="section-card">
             <h2>📧 Contact</h2>
             <p>Mail: <a href="mailto:swetha.cho74@gmail.com">swetha.cho74@gmail.com</a></p>
             <p>Contact: +1 572-239-7783</p>
-            <p>LinkedIn: [Your LinkedIn Profile URL] | GitHub: [Your GitHub Profile URL]</p>
+            <p>
+                LinkedIn: <a href="https://www.linkedin.com/in/swethabondada/">swethabondada</a> | 
+                GitHub: <a href="https://github.com/swethacho74-ship-it">swethacho74-ship-it</a>
+            </p>
         </section>
 
     </main>
@@ -120,6 +180,3 @@
     </footer>
 </body>
 </html>
-                    <li>Engineered and deployed a scalable, high-throughput inference API for LLMs like GPT-3 and GPT-4 using FastAPI and Docker.</li>
-                    <li>Developed Retrieval-Augmented Generation (RAG) pipelines leveraging FAISS/Pinecone/Weaviate for contextual, grounded answers.</li>
-                    <li>Optim
