@@ -1,25 +1,210 @@
+/* --- Base Styles --- */
+:root {
+    --primary-color: #0077B6; /* Professional Blue */
+    --secondary-color: #48CAE4; /* Lighter Blue/Cyan */
+    --text-color: #333333;
+    --background-light: #f4f7f9;
+    --card-background: #ffffff;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: var(--text-color);
+    background-color: var(--background-light);
 }
-header {
-    background: #0077b6; /* Professional blue */
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-section {
-    padding: 40px 20px;
-    max-width: 1000px;
+
+.container {
+    max-width: 1100px;
     margin: auto;
-}
-.project-card {
-    border: 1px solid #ccc;
     padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
 }
-/* Add more styles for skills table, project details, etc. */
+
+/* --- Header & Navigation --- */
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content h1 {
+    margin-bottom: 5px;
+    font-size: 2.5em;
+}
+
+.header-content .title {
+    margin-top: 0;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+nav a:hover {
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* --- Section Cards --- */
+.section-card {
+    background-color: var(--card-background);
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section-card h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* --- About Section Specifics --- */
+.hero-summary {
+    border-left: 5px solid var(--secondary-color);
+    padding: 15px 20px;
+    background-color: #e6f6ff;
+    margin: 20px 0 30px 0;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+/* --- Projects Section Specifics (Case Studies) --- */
+.project-card {
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.project-card h4 {
+    color: var(--secondary-color);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.project-card ul {
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+.tech-used {
+    font-weight: bold;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #e0e0e0;
+}
+
+/* --- Skills Table --- */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.skills-table th, .skills-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.skills-table th {
+    background-color: #f0f0f0;
+    width: 25%;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.skills-table tr:hover {
+    background-color: #fcfcfc;
+}
+
+/* --- Experience Section --- */
+.job-list li {
+    list-style: none;
+    padding: 15px 0;
+    border-bottom: 1px dotted #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.job-list li:last-child {
+    border-bottom: none;
+}
+
+.job-list strong {
+    font-size: 1.1em;
+    color: var(--primary-color);
+}
+
+.dates {
+    font-style: italic;
+    color: #666;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333333;
+    color: white;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .job-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dates {
+        margin-top: 5px;
+    }
+
+    .skills-table th, .skills-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .skills-table th {
+        background-color: #f7f7f7;
+    }
+}
